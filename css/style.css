@@ -1,3 +1,98 @@
 * {
 	margin: 0 auto;
 }
+section {
+	width: 980px;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 2%;
+	font-family: "RobotoCondensed-Light";
+	font-size: 1vmax;
+}
+
+.inviteCode button{ 
+	margin-left: -26px;
+	height: 35px;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+.inviteCode button:hover {
+	background: rgba(0,0,0,0.1);
+}
+.inviteCode input {
+	outline: none;
+	height: 30px;
+	margin-top: 1%;
+}
+.signin button{ 
+	margin-left: -26px;
+	height: 35px;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+.signin button:hover {
+	background: rgba(0,0,0,0.1);
+}
+.signin input {
+	outline: none;
+	height: 30px;
+	margin-top: 1%;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+/**font connect**/
+/* font-family: "RobotoCondensed-LightItalic"; */
+@font-face {
+	font-family: "RobotoCondensed-LightItalic";
+	src:url("../fonts/RobotoCondensed-LightItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoCondensed-Bold"; */
+@font-face {
+	font-family: "RobotoCondensed-Bold";
+	src:url("../fonts/RobotoCondensed-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoCondensed-BoldItalic"; */
+@font-face {
+	font-family: "RobotoCondensed-BoldItalic";
+	src:url("../fonts/RobotoCondensed-BoldItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoCondensed-Italic"; */
+@font-face {
+	font-family: "RobotoCondensed-Italic";
+	src:url("../fonts/RobotoCondensed-Italic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoCondensed-Light"; */
+@font-face {
+	font-family: "RobotoCondensed-Light";
+	src:url("../fonts/RobotoCondensed-Light.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoCondensed-Regular"; */
+@font-face {
+	font-family: "RobotoCondensed-Regular";
+	src:url("../fonts/RobotoCondensed-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

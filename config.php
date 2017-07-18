@@ -8,6 +8,7 @@ function top($title)
 			<meta charset='utf-8'>
 			<title>".$title."</title>
 			<link rel='stylesheet' type='text/css' href='css/style.css'>
+			<link rel='stylesheet' type='text/css' href='css/font-awesome.min.css'>
 		</head>
 		<body>
 
@@ -20,5 +21,6 @@ function bottom()
 		</html>
 	";
 };
+mysql_connect("localhost", "root", "");
 
 ?>
