@@ -11,7 +11,7 @@ section {
 }
 
 .inviteCode button{ 
-	margin-left: -26px;
+	margin-left: -24px;
 	height: 35px;
 	background: transparent;
 	border: none;
@@ -26,8 +26,8 @@ section {
 	margin-top: 1%;
 }
 .signin button{ 
-	margin-left: -26px;
-	height: 35px;
+	margin-left: -24px;
+	height: 34px;
 	background: transparent;
 	border: none;
 	outline: none;
