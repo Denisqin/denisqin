@@ -9,9 +9,9 @@ echo "
 		<br>
 		<p>Sign In</p>
 		<form method='post' action='' class='signin'>
-			<input type='text' name='inviteCode' autocomplete='off'>
+			<input type='text' name='login' autocomplete='off'>
 			<br>
-			<input type='text' name='inviteCode' autocomplete='off'>
+			<input type='text' name='password' autocomplete='off'>
 			<button><i class='fa fa-arrow-right' aria-hidden='true'></i></button>
 		</form>
 		<br>
@@ -24,20 +24,7 @@ echo "
 		</form>
 	</section>
 ";
-if(isset($_POST['inviteCode']))
-{
-	 $query = mysql_query("SELECT COUNT(code_id) FROM inviteCode WHERE code='".mysql_real_escape_string($_POST['inviteCode'])."'");
-
-    if(mysql_result($query, 0) > 0)
-
-    {
-
-        echo "good";
-        mysql_query("DELETE FROM inviteCode WHERE code='".mysql_real_escape_string($_POST['inviteCode'])."'");
-
-    }
-}
-if(isset($_POST['submit']))
+if(isset($_POST['password']))
 
 {
 
@@ -58,8 +45,6 @@ if(isset($_POST['submit']))
     	$_SESSION['login'] = $_POST['login'];
     	$ulogin = $_SESSION['login'];
         echo'Добро пожаловать'.$ulogin.'Вы уже тут';
-        header('Location: ../user/panel.php');
-
     }
 
     else
@@ -70,6 +55,20 @@ if(isset($_POST['submit']))
 
     }
 }
+if(isset($_POST['inviteCode']))
+{
+	 $query = mysql_query("SELECT COUNT(code_id) FROM inviteCode WHERE code='".mysql_real_escape_string($_POST['inviteCode'])."'");
+
+    if(mysql_result($query, 0) > 0)
+
+    {
+
+        echo "good";
+        mysql_query("DELETE FROM inviteCode WHERE code='".mysql_real_escape_string($_POST['inviteCode'])."'");
+
+    }
+}
+
 
 
 bottom();
