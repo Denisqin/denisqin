@@ -63,8 +63,12 @@ if(isset($_POST['inviteCode']))
 
     {
 
-        echo "good";
         mysql_query("DELETE FROM inviteCode WHERE code='".mysql_real_escape_string($_POST['inviteCode'])."'");
+        session_start();
+    	$_SESSION['inviteCode'] = $_POST['inviteCode'];
+    	$uInviteCode = $_SESSION['inviteCode'];
+        echo'inviteCode '.$uInviteCode.' correct :)';
+        header('Location: ../registration.php');
 
     }
 }

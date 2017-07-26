@@ -2,7 +2,9 @@
 ob_start();
 include 'config.php';
 top("Registration");
-echo "
+session_start();
+if ($_SESSION['inviteCode']) {
+	echo "
 	<section>
 		<h1>InviteCode correct</h1>
 		<br>
@@ -101,6 +103,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
         mysql_query("INSERT INTO users SET user_login='".$login."', user_password='".$password."', user_email='".$email."'");
         echo "Успешная регистрация";
+        session_destroy();
         header( 'Location: ../index.php' );
        
 
@@ -123,7 +126,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     }
 
 }
-
+}
+else {
+	header('Location: ../error.php');
+	echo $_SESSION['inviteCode'];
+};
 bottom();
 ob_flush();
 ?>
