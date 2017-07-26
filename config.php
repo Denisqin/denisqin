@@ -1,6 +1,7 @@
 <?php
 function top($title)
 {
+	session_start();
 	echo "
 		<!DOCTYPE html>
 		<html>
