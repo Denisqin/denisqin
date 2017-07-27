@@ -24,6 +24,8 @@ echo "
 		</form>
 	</section>
 ";
+echo $_SESSION['login'];
+echo $_SESSION['inviteCode'];
 if(isset($_POST['password']))
 
 {
@@ -44,7 +46,7 @@ if(isset($_POST['password']))
     	session_start();
     	$_SESSION['login'] = $_POST['login'];
     	$ulogin = $_SESSION['login'];
-        echo'Добро пожаловать'.$ulogin.'Вы уже тут';
+        header('Location: ../panel.php');
     }
 
     else

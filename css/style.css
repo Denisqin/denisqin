@@ -8,6 +8,9 @@ section {
 	padding: 2%;
 	font-family: "RobotoCondensed-Light";
 	font-size: 1vmax;
+	border-right: rgba(0,0,0,0.4) 1px solid;
+	border-left: rgba(0,0,0,0.4) 1px solid;
+	border-bottom: rgba(0,0,0,0.4) 1px solid;
 }
 
 .inviteCode button{ 

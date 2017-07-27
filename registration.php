@@ -3,7 +3,8 @@ ob_start();
 include 'config.php';
 top("Registration");
 session_start();
-if ($_SESSION['inviteCode']) {
+if (!($_SESSION['login'])) {
+	if ($_SESSION['inviteCode']) {
 	echo "
 	<section>
 		<h1>InviteCode correct</h1>
@@ -129,7 +130,10 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 else {
 	header('Location: ../error.php');
-	echo $_SESSION['inviteCode'];
+};
+}
+else {
+	header('Location: ../panel.php');
 };
 bottom();
 ob_flush();
